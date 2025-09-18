@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+
+<h:head>
+
+	<title>Login</title>
+
+
+	<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+	width: 360px;
+	padding: 8% 0 0;
+	margin: auto;
+	
+}
+
+.form {
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+	font-family: "Roboto", sans-serif;
+	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.form button {
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #0000CD;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
+}
+
+.form button:hover, .form button:active, .form button:focus {
+	background: #2460A7FF;
+}
+
+.form .message {
+	margin: 15px 0 0;
+	color: #b3b3b3;
+	font-size: 12px;
+}
+
+.form .message a {
+	color: #4CAF50;
+	text-decoration: none;
+}
+
+.form .register-form {
+	display: none;
+}
+
+.container {
+	position: relative;
+	z-index: 1;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.container:before, .container:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.container .info {
+	margin: 50px auto;
+	text-align: center;
+}
+
+.container .info h1 {
+	margin: 0 0 15px;
+	padding: 0;
+	font-size: 36px;
+	font-weight: 300;
+	color: #1a1a1a;
+}
+
+.container .info span {
+	color: #4d4d4d;
+	font-size: 12px;
+}
+
+.container .info span a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.container .info span .fa {
+	color: #EF3B3A;
+}
+
+body {
+	background: #B3C7D6FF; /* fallback for old browsers */
+	background: -webkit-linear-gradient(right, #B3C7D6FF, #0000CD);
+	background: -moz-linear-gradient(right, #B3C7D6FF, #0000CD);
+	background: -o-linear-gradient(right, #B3C7D6FF, #0000CD);
+	background: linear-gradient(to left, #B3C7D6FF, #0000CD);
+	font-family: "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+</style>
+
+</h:head>
+<body>
+	<h:form>
+		<div id="no" align="right"
+			style="margin-right: 0px; color: #DC143C; font-size: 12px; font-weight: bold;">
+			<p>WhatsApp No:- 7800955869</p>
+			<p>https://www.facebook.com/GuptaEduHub/ </p>
+			<p>https://www.instagram.com/guptaeduhub/</p>
+			<p>https://www.youtube.com/@GuptaEduHub</p>
+		</div>
+		<p:messages id="messages" showDetail="true" closable="true">
+			<p:autoUpdate />
+		</p:messages>
+
+
+		<h:panelGroup style="display:block; text-align:center">
+
+			<h:graphicImage value="/images/guptainv-bck.png"  />
+
+		</h:panelGroup>
+
+		<div class="login-page">
+			<div class="form">
+
+				<form class="login-form">
+
+
+
+					<span style="font: bold;"> <b><i> Welcome to Gupta
+								EduHub </i></b> <br></br>
+					</span>
+					<p></p>
+
+				  <h:outputLabel for="username" value="Username:"/>
+        <h:inputText id="username" value="#{login.usrName}" /><br/><br/>
+
+        <h:outputLabel for="password" value="Password:"/>
+        <h:inputSecret id="password" value="#{login.pwd}" /><br/><br/>
+
+        <h:commandButton value="Login" action="#{login.submit}" /><br/><br/>
+
+
+
+				</form>
+			</div>
+		</div>
+
+
+
+	</h:form>
+</body>
+</html>
